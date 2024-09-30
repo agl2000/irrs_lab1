@@ -1,29 +1,4 @@
 import re
-
-# def clean_text(text):
-#     # If text contains a period (.), return None
-#     if text.find('.') != -1:
-#         return None
-#     return text
-
-# def process_file(input_file, output_file):
-#     # Open the input and output files with UTF-8 encoding
-#     with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
-#         for line in infile:
-#             parts = line.split(',')
-#             if len(parts) == 2:
-#                 cleaned_word = clean_text(line)
-#                 if cleaned_word:
-#                     # Remove extra spaces and unwanted symbols from the word
-#                     cleaned_word = re.sub(r'[^\w\s]', '', cleaned_word.strip())  # Removes punctuation except for alphanumeric and spaces
-#                     outfile.write(line)
-
-# if __name__ == "__main__":
-#     input_file = 'word_counts_news.txt'  # Replace with your input file path
-#     output_file = 'word_counts_news_clean.txt'  # Replace with your output file path
-#     process_file(input_file, output_file)
-
-
 import chardet
 
 def detect_encoding(file_path):
@@ -57,6 +32,6 @@ def process_file(input_file, output_file):
                     outfile.write(new_line)
 
 if __name__ == "__main__":
-    input_file = 'word_counts_news.txt'  # Replace with your input file path
-    output_file = 'word_counts_news_clean.txt'  # Replace with your output file path
+    input_file = 'word_counts_arxiv_abs.txt'  # Replace with your input file path
+    output_file = 'word_counts_arxiv_abs_clean.txt'  # Replace with your output file path
     process_file(input_file, output_file)
